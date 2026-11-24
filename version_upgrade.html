@@ -79,15 +79,15 @@
                         </div>
                         <span class="release">Latest release</span>
                     </div>
-                    <h2 id="download-title">QuestionSmith 0.0.2</h2>
+                    <h2 id="download-title">QuestionSmith 0.0.3</h2>
                     <p class="file-name">image-study-app.html</p>
                     <button id="download-button" class="download" type="button">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg>
-                        <span id="download-label">Download version 0.0.2</span>
+                        <span id="download-label">Download version 0.0.3</span>
                     </button>
                     <p class="manual">The download begins when you click the button.</p>
                     <p id="download-status" role="status" aria-live="polite"></p>
-                    <noscript><p><a href="https://qsmith.app/0.0.2/image-study-app.html" download="image-study-app.html">Download QuestionSmith 0.0.2</a></p></noscript>
+                    <noscript><p><a href="https://qsmith.app/0.0.3/image-study-app.html" download="image-study-app.html">Download QuestionSmith 0.0.3</a></p></noscript>
                 </section>
             </div>
             <ol class="steps" aria-label="How to update">
@@ -114,7 +114,7 @@
             status.textContent = '';
             status.className = '';
             try {
-                const response = await fetch('https://qsmith.app/0.0.2/image-study-app.html', {cache: 'no-store'});
+                const response = await fetch('https://qsmith.app/0.0.3/image-study-app.html', {cache: 'no-store'});
                 if (!response.ok) throw new Error('Download unavailable');
                 const file = new Blob([await response.blob()], {type: 'text/html'});
                 const url = URL.createObjectURL(file);
@@ -131,7 +131,7 @@
                 status.textContent = 'The download could not be started. Check your connection and try again.';
             } finally {
                 button.disabled = false;
-                label.textContent = 'Download version 0.0.2';
+                label.textContent = 'Download version 0.0.3';
             }
         });
     </script>
